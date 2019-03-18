@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "CustomerForm";
+}
+
+<h2>CustomerForm</h2>
+
+@if (ViewData["Msg"] != null)
+{
+    <h3>@ViewData["Msg"]</h3>
+}
+else
+{
+    <form asp-action="CustomerForm"
+          asp-controller="Home">
+
+        <label for="first_name">First Name: </label>
+        <input type="text" id="first_name" name="first_name" />
+        <br />
+
+        <label for="last_name">Last Name: </label>
+        <input type="text" id="last_name" name="last_name" />
+        <br />
+
+        <input type="submit" value="Add Customer" />
+
+    </form>
+}

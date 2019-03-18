@@ -1,0 +1,32 @@
+﻿
+@model Customer
+@{
+    ViewData["Title"] = "CustomerBinding";
+}
+
+<h2>CustomerBinding</h2>
+
+<form asp-action="CustomerBinding"
+      asp-controller="Home">
+
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" />
+    <span class="text-danger" asp-validation-for="FirstName"></span>
+    <br />
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" />
+    <span class="text-danger" asp-validation-for="LastName"></span>
+    <br />
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span class="text-danger" asp-validation-for="Email"></span>
+    <br />
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" />
+    <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+    <br />
+
+    <input class="btn btn-primary" type="submit" value="Register Customer" />
+</form>
+
+
